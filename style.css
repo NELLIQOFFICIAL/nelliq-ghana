@@ -488,3 +488,52 @@ header, nav {
     align-items: center !important;
     justify-content: center !important;
 }
+
+/* ==========================================================================
+   ULTRA-COMPACT SEARCH BOX FORCING (MINIMALIST STYLE)
+   ========================================================================== */
+
+/* 1. Shrink the main full-width outer container padding */
+.nelliq-search-section {
+    padding: 20px 10px !important; /* Cut padding in half to save vertical space */
+}
+
+/* 2. Make the floating card container much narrower and tighter */
+.search-wrap {
+    padding: 15px 25px !important; /* Tiny inner padding */
+    max-width: 450px !important;   /* Narrower card width */
+    border-radius: 8px !important; /* Tighter corners for a smaller look */
+}
+
+/* 3. Scale down the header text significantly */
+.search-wrap h3 {
+    font-size: 1.1rem !important; /* Much smaller text */
+    margin-bottom: 12px !important; /* Pull the text box closer */
+}
+
+/* 4. Drop the text box height down to a sleek 32px */
+.nelliq-search-section .gsc-input-box {
+    height: 32px !important; /* Super slim height */
+}
+
+/* 5. Shrink the input font so it fits the tiny box */
+.nelliq-search-section input.gsc-input,
+.nelliq-search-section .gsc-input-box input {
+    height: 26px !important;
+    font-size: 0.85rem !important; /* Smaller typing font */
+    padding-left: 8px !important;
+}
+
+/* 6. Match the action button precisely to the 32px height */
+.nelliq-search-section button.gsc-search-button, 
+.nelliq-search-section .gsc-search-button-v2 {
+    height: 32px !important; /* Slim button */
+    padding: 0 15px !important; /* Narrower button sides */
+}
+
+/* Shrink the magnifying glass icon inside the button */
+.nelliq-search-section button.gsc-search-button svg,
+.nelliq-search-section .gsc-search-button-v2 svg {
+    width: 12px !important;
+    height: 12px !important;
+}
