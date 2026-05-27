@@ -361,96 +361,106 @@ header, nav {
     justify-content: space-between;
     width: 100%;
 }
+/* ==========================================================================
+   NELLIQ GHANA - CUSTOM GOOGLE SEARCH COMPONENT
+   ========================================================================== */
 
-/* Beautiful custom container for the Google search elements */
+/* 1. Main Section Container - Beautifully centered with a clean layout */
 .nelliq-search-section {
-    background-color: #f4f7fa;
-    padding: 30px 20px;
-    text-align: center;
-}
-
-.search-wrap {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.search-wrap h3 {
-    color: #003366;
-    font-family: 'Segoe UI', sans-serif;
-    margin-bottom: 15px;
-    font-size: 1.4rem;
-}
-
-/* Force Google's input box to look clean and modern */
-.gsc-control-cse {
-    border: none !important;
-    background-color: transparent !important;
-    padding: 0 !important;
-}
-
-.gsc-search-button-v2 {
-    background-color: #003366 !important;
-    border-color: #003366 !important;
-}
-/* 1. Center the container and add elegant spacing */
-.nelliq-search-section {
-    background-color: #ffffff; /* White background to blend seamlessly */
-    padding: 40px 20px 20px 20px;
+    background-color: #f8fafc; /* Ultra-light premium gray backdrop */
+    padding: 50px 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid #e2e8f0;
 }
 
-/* 2. Style the heading so it matches your brand typography */
+/* 2. Section Header Styling */
 .nelliq-search-section h3 {
-    color: #003366; /* Your signature deep blue */
+    color: #003366; /* Signature Deep Blue */
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.75rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
     letter-spacing: 0.5px;
 }
 
-/* 3. Give the Google search element a controlled width and center it */
+/* 3. Constrain the Search Wrapper Width */
 .nelliq-search-section .gcse-search,
 .nelliq-search-section > div {
     width: 100%;
-    max-width: 650px; /* Keeps the search bar from stretching too wide */
-    margin: 0 auto;
+    max-width: 650px; /* Keeps the input field from over-stretching */
+    margin: 0 auto !important;
 }
 
-/* 4. Overriding Google's aggressive default framing styles */
+/* ==========================================================================
+   GOOGLE PROGRAMMABLE SEARCH ENGINE OVERRIDES (HIGH PRIORITY)
+   ========================================================================== */
+
+/* Remove Google's default border frames and transparent backdrops */
 .gsc-control-cse {
     border: none !important;
     background: transparent !important;
     padding: 0 !important;
 }
 
-/* 5. Smooth out the input text box */
-input.gsc-input, 
-.gsc-input-box {
-    border: 2px solid #e0e0e0 !important;
+/* The Outer Text Field Container - Crisp White with a Deep Blue Border */
+.nelliq-search-section .gsc-input-box {
+    border: 2px solid #003366 !important;
+    background-color: #ffffff !important;
     border-radius: 6px 0 0 6px !important;
-    height: 40px !important;
+    height: 46px !important;
+    display: flex !important;
+    align-items: center !important;
+    box-shadow: 0 2px 6px rgba(0, 51, 102, 0.05) !important;
+}
+
+/* The Actual Text Input Box inside - Forces text readability */
+.nelliq-search-section input.gsc-input,
+.nelliq-search-section .gsc-input-box input {
     background: #ffffff !important;
-    font-family: 'Segoe UI', sans-serif !important;
-}
-
-/* 6. Style Google's search button to use your brand blue */
-button.gsc-search-button, 
-.gsc-search-button-v2 {
-    background-color: #003366 !important;
-    border: 1px solid #003366 !important;
-    border-radius: 0 6px 6px 0 !important;
     height: 40px !important;
-    padding: 10px 20px !important;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 1rem !important;
+    color: #1a202c !important; /* Dark text for clarity */
+    padding-left: 14px !important;
 }
 
-button.gsc-search-button:hover, 
+/* Placeholder styling fix ("Enhanced by Google") */
+.nelliq-search-section input.gsc-input::-webkit-input-placeholder {
+    color: #a0aec0 !important;
+}
+
+/* Google Search Button Layout - Perfectly matches input height */
+.nelliq-search-section button.gsc-search-button, 
+.nelliq-search-section .gsc-search-button-v2 {
+    background-color: #003366 !important;
+    border: 2px solid #003366 !important;
+    border-radius: 0 6px 6px 0 !important;
+    height: 46px !important;
+    padding: 10px 26px !important;
+    cursor: pointer;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
+}
+
+/* Hover state for Search Button */
+.nelliq-search-section button.gsc-search-button:hover, 
 .gsc-search-button-v2:hover {
-    background-color: #002244 !important; /* Slightly darker blue on hover */
+    background-color: #002244 !important; /* Elegant dark blue hue change */
+    border-color: #002244 !important;
+}
+
+/* Clean up any miscellaneous Google brand watermarks or table artifacts */
+.gsib_a {
+    padding: 0 10px 0 0 !important;
+}
+.gsib_b {
+    display: none !important; /* Removes clunky default inner clear buttons */
 }
