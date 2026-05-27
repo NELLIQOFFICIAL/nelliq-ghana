@@ -370,3 +370,41 @@ footer { background: var(--army-blue); color: var(--white); padding: 40px 0; tex
     color: #003366;
     margin-bottom: 15px;
 }
+/* Restores your navigation header back to normal */
+header, nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Beautiful custom container for the Google search elements */
+.nelliq-search-section {
+    background-color: #f4f7fa;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.search-wrap {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-wrap h3 {
+    color: #003366;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+/* Force Google's input box to look clean and modern */
+.gsc-control-cse {
+    border: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+}
+
+.gsc-search-button-v2 {
+    background-color: #003366 !important;
+    border-color: #003366 !important;
+}
