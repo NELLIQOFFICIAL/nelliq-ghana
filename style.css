@@ -513,7 +513,7 @@ header, nav {
 
 /* 4. Drop the text box height down to a sleek 32px */
 .nelliq-search-section .gsc-input-box {
-    height: 32px !important; /* Super slim height */
+    height: 30px !important; /* Super slim height */
 }
 
 /* 5. Shrink the input font so it fits the tiny box */
@@ -527,13 +527,13 @@ header, nav {
 /* 6. Match the action button precisely to the 32px height */
 .nelliq-search-section button.gsc-search-button, 
 .nelliq-search-section .gsc-search-button-v2 {
-    height: 32px !important; /* Slim button */
-    padding: 0 15px !important; /* Narrower button sides */
+    height: 30px !important; /* Slim button */
+    padding: 0 13px !important; /* Narrower button sides */
 }
 
 /* Shrink the magnifying glass icon inside the button */
 .nelliq-search-section button.gsc-search-button svg,
 .nelliq-search-section .gsc-search-button-v2 svg {
-    width: 12px !important;
-    height: 12px !important;
+    width: 11px !important;
+    height: 11px !important;
 }
