@@ -392,3 +392,65 @@ header, nav {
     background-color: #003366 !important;
     border-color: #003366 !important;
 }
+/* 1. Center the container and add elegant spacing */
+.nelliq-search-section {
+    background-color: #ffffff; /* White background to blend seamlessly */
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 2. Style the heading so it matches your brand typography */
+.nelliq-search-section h3 {
+    color: #003366; /* Your signature deep blue */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* 3. Give the Google search element a controlled width and center it */
+.nelliq-search-section .gcse-search,
+.nelliq-search-section > div {
+    width: 100%;
+    max-width: 650px; /* Keeps the search bar from stretching too wide */
+    margin: 0 auto;
+}
+
+/* 4. Overriding Google's aggressive default framing styles */
+.gsc-control-cse {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* 5. Smooth out the input text box */
+input.gsc-input, 
+.gsc-input-box {
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px 0 0 6px !important;
+    height: 40px !important;
+    background: #ffffff !important;
+    font-family: 'Segoe UI', sans-serif !important;
+}
+
+/* 6. Style Google's search button to use your brand blue */
+button.gsc-search-button, 
+.gsc-search-button-v2 {
+    background-color: #003366 !important;
+    border: 1px solid #003366 !important;
+    border-radius: 0 6px 6px 0 !important;
+    height: 40px !important;
+    padding: 10px 20px !important;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button.gsc-search-button:hover, 
+.gsc-search-button-v2:hover {
+    background-color: #002244 !important; /* Slightly darker blue on hover */
+}
