@@ -362,52 +362,59 @@ header, nav {
     width: 100%;
 }
 /* ==========================================================================
-   NELLIQ GHANA - CUSTOM GOOGLE SEARCH COMPONENT
+   NELLIQ GHANA - PREMIUM CARD GOOGLE SEARCH COMPONENT
    ========================================================================== */
 
-/* 1. Main Section Container - Beautifully centered with a clean layout */
+/* The outer section background spanning the full width */
 .nelliq-search-section {
-    background-color: #f8fafc; /* Ultra-light premium gray backdrop */
-    padding: 50px 20px;
+    background-color: #f1f5f9; /* Soft background tint */
+    padding: 60px 20px;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #e2e8f0;
+    align-items: center;
 }
 
-/* 2. Section Header Styling */
-.nelliq-search-section h3 {
-    color: #003366; /* Signature Deep Blue */
+/* This is the card element that now perfectly shrinks to fit the content! */
+.search-wrap {
+    background-color: #ffffff; /* Clean white card */
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.08); /* Premium brand shadow */
+    width: 100%;
+    max-width: 650px; /* Keeps it tight and perfectly proportional */
+    box-sizing: border-box;
+}
+
+/* Section Header Typography inside the card */
+.search-wrap h5 {
+    color: #003366;
     font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     margin-top: 0;
-    margin-bottom: 25px;
-    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    letter-spacing: 0.3px;
 }
 
-/* 3. Constrain the Search Wrapper Width */
+/* Ensure Google elements adapt cleanly to our inner card width */
 .nelliq-search-section .gcse-search,
 .nelliq-search-section > div {
-    width: 100%;
-    max-width: 650px; /* Keeps the input field from over-stretching */
+    width: 100% !important;
     margin: 0 auto !important;
 }
 
 /* ==========================================================================
-   GOOGLE PROGRAMMABLE SEARCH ENGINE OVERRIDES (HIGH PRIORITY)
+   GOOGLE INPUT FIELD FIXES
    ========================================================================== */
 
-/* Remove Google's default border frames and transparent backdrops */
 .gsc-control-cse {
     border: none !important;
     background: transparent !important;
     padding: 0 !important;
 }
 
-/* The Outer Text Field Container - Crisp White with a Deep Blue Border */
+/* Input Frame wrapper boundary lines */
 .nelliq-search-section .gsc-input-box {
     border: 2px solid #003366 !important;
     background-color: #ffffff !important;
@@ -415,26 +422,20 @@ header, nav {
     height: 46px !important;
     display: flex !important;
     align-items: center !important;
-    box-shadow: 0 2px 6px rgba(0, 51, 102, 0.05) !important;
 }
 
-/* The Actual Text Input Box inside - Forces text readability */
+/* Inside the text line fields */
 .nelliq-search-section input.gsc-input,
 .nelliq-search-section .gsc-input-box input {
     background: #ffffff !important;
     height: 40px !important;
     font-family: 'Segoe UI', sans-serif !important;
     font-size: 1rem !important;
-    color: #1a202c !important; /* Dark text for clarity */
+    color: #1a202c !important;
     padding-left: 14px !important;
 }
 
-/* Placeholder styling fix ("Enhanced by Google") */
-.nelliq-search-section input.gsc-input::-webkit-input-placeholder {
-    color: #a0aec0 !important;
-}
-
-/* Google Search Button Layout - Perfectly matches input height */
+/* Google Action Button */
 .nelliq-search-section button.gsc-search-button, 
 .nelliq-search-section .gsc-search-button-v2 {
     background-color: #003366 !important;
@@ -447,20 +448,7 @@ header, nav {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out !important;
 }
 
-/* Hover state for Search Button */
-.nelliq-search-section button.gsc-search-button:hover, 
-.gsc-search-button-v2:hover {
-    background-color: #002244 !important; /* Elegant dark blue hue change */
-    border-color: #002244 !important;
-}
-
-/* Clean up any miscellaneous Google brand watermarks or table artifacts */
-.gsib_a {
-    padding: 0 10px 0 0 !important;
-}
-.gsib_b {
-    display: none !important; /* Removes clunky default inner clear buttons */
-}
+.gsib_a { padding: 0 !important; }
+.gsib_b { display: none !important; }
