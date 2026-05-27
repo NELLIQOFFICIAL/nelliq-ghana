@@ -452,3 +452,39 @@ header, nav {
 
 .gsib_a { padding: 0 !important; }
 .gsib_b { display: none !important; }
+
+/* Optimized Input Frame - reduced from 46px to 38px */
+.nelliq-search-section .gsc-input-box {
+    border: 2px solid #003366 !important;
+    background-color: #ffffff !important;
+    border-radius: 6px 0 0 6px !important;
+    height: 38px !important; /* Shorter box height */
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Adjusted Inner Text Input Field */
+.nelliq-search-section input.gsc-input,
+.nelliq-search-section .gsc-input-box input {
+    background: #ffffff !important;
+    height: 32px !important; /* Scaled down to prevent text clipping */
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 0.95rem !important; /* Slightly smaller text font */
+    color: #1a202c !important;
+    padding-left: 12px !important;
+}
+
+/* Optimized Search Button - perfectly matches the new 38px input height */
+.nelliq-search-section button.gsc-search-button, 
+.nelliq-search-section .gsc-search-button-v2 {
+    background-color: #003366 !important;
+    border: 2px solid #003366 !important;
+    border-radius: 0 6px 6px 0 !important;
+    height: 38px !important; /* Matches wrapper height precisely */
+    padding: 6px 20px !important; /* Reduced padding for a tighter fit */
+    cursor: pointer;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
