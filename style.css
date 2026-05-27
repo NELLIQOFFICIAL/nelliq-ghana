@@ -354,22 +354,6 @@ footer { background: var(--army-blue); color: var(--white); padding: 40px 0; tex
     .tagline { font-size: 1.1rem; }
     .hero-brand-logo { height: 55px; }
 }
-/* Center and style the search container */
-.search-box-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-}
-
-.search-box-container h3 {
-    color: #003366;
-    margin-bottom: 15px;
-}
 /* Restores your navigation header back to normal */
 header, nav {
     display: flex;
