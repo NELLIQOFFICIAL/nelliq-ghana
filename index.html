@@ -320,5 +320,17 @@
     <script async src="https://cse.google.com/cse.js?cx=e35a09559c45e4812">
 </script>
 <div class="gcse-search"></div>
+    <script>
+  // Wait for Google's search box to load fully, then swap the placeholder text
+  window.onload = function() {
+    setTimeout(function() {
+      const searchInput = document.querySelector('input.gsc-input');
+      if (searchInput) {
+        searchInput.placeholder = "Search the NELLIQ platform...";
+        searchInput.title = "Search the NELLIQ platform...";
+      }
+    }, 2000); // Gives Google's script 2 seconds to render before swapping
+  };
+</script>
 </body>
 </html>
